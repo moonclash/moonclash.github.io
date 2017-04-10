@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  padding: 200px 25px;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .container h1 {
+    font-size: 3.9em;
+    margin: 0;
+    padding: 10px 0; }
+  .container p {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 5px 0; }
+
+body {
+  overflow-x: hidden;
+  background: #1C202A;
+  color: #fff;
+  font-family: 'Raleway';
+  text-transform: uppercase; }
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px;
+  opacity: 0; }
+
+.ring-1 {
+  color: #50D4C5;
+  box-shadow: 0 0 15px 5px rgba(80, 212, 197, 0.6);
+  animation: 2000ms lotu ease-in-out 500ms forwards; }
+
+.ring-2 {
+  color: #8C53F9;
+  box-shadow: 0 0 15px 5px rgba(140, 83, 249, 0.6);
+  right: -10%;
+  animation: 2000ms lotr ease-in-out 500ms forwards; }
+
+.ring-3 {
+  color: #5946FF;
+  box-shadow: 0 0 15px 5px rgba(89, 70, 255, 0.6);
+  left: -10%;
+  animation: 2000ms lotl ease-in-out 500ms forwards; }
+
+.ring-4 {
+  color: #E7586E;
+  box-shadow: 0 0 15px 5px rgba(231, 88, 110, 0.6);
+  animation: 2000ms lotd ease-in-out 500ms forwards; }
+
+.ring:nth-child(1) {
+  border: 15px solid;
+  z-index: -2;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  animation-delay: 250ms; }
+
+.ring:nth-child(2) {
+  border: 30px solid;
+  z-index: -3;
+  width: 400px;
+  height: 400px;
+  top: 200px;
+  animation-delay: 500ms; }
+
+.ring:nth-child(3) {
+  border: 45px solid;
+  z-index: -4;
+  width: 600px;
+  height: 600px;
+  top: 300px;
+  animation-delay: 750ms; }
+
+.ring:nth-child(4) {
+  border: 60px solid;
+  z-index: -5;
+  width: 800px;
+  height: 800px;
+  top: 400px;
+  animation-delay: 1000ms; }
+
+strong {
+  color: #5946FF;
+  text-shadow: 0 0 4px; }
+
+@keyframes lotr {
+  from {
+    opacity: 0;
+    transform: translateX(250%); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes lotl {
+  from {
+    opacity: 0;
+    transform: translateX(-250%); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes lotu {
+  from {
+    opacity: 0;
+    transform: translateY(-250%); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes lotd {
+  from {
+    opacity: 0;
+    transform: translateY(-250%); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.details {
+  max-width: 600px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px 15px; }
+  .details a {
+    color: #50D4C5;
+    text-decoration: none;
+    font-size: 1.9em;
+    font-weight: 900; }
