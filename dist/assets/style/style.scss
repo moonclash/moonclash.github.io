@@ -1,9 +1,8 @@
-$main-blue: #1C202A;
+  $main-blue: #1C202A;
 $main-purple: #8C53F9;
 $main-green: #50D4C5;
 $main-teal: #5946FF;
 $main-pink: #E7586E;
-
 * {
   box-sizing: border-box;
 }
@@ -13,13 +12,11 @@ $main-pink: #E7586E;
   max-width: 1280px;
   margin: 0 auto;
   overflow: hidden;
-
   h1 {
     font-size: 3.9em;
     margin: 0;
     padding: 10px 0;
   }
-
   p {
     font-size: 1.2em;
     color: transparentize(#fff, .1);
@@ -30,7 +27,8 @@ $main-pink: #E7586E;
 
 body {
   overflow-x: hidden;
-  background: $main-blue;
+  background: url('./bg.jpg') no-repeat center center / cover, $main-blue;
+  background-blend-mode: overlay;
   color: #fff;
   font-family: 'Raleway';
   text-transform: uppercase;
@@ -69,8 +67,6 @@ body {
   animation: 2000ms lotd ease-in-out 500ms forwards;
 }
 
-
-
 @for $i from 1 through 4 {
   .ring:nth-child(#{$i}) {
     border: 15px * $i solid;
@@ -79,7 +75,6 @@ body {
     height: 200px * $i;
     top: 100px * $i;
     animation-delay: 250ms * $i;
-    
   }
 }
 
@@ -93,7 +88,6 @@ strong {
     opacity: 0;
     transform: translateX(250%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -105,20 +99,17 @@ strong {
     opacity: 0;
     transform: translateX(-250%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-
 @keyframes lotu {
   from {
     opacity: 0;
     transform: translateY(-250%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -130,7 +121,6 @@ strong {
     opacity: 0;
     transform: translateY(-250%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -144,11 +134,53 @@ strong {
   align-items: center;
   justify-content: space-around;
   padding: 25px 15px;
-
   a {
     color: $main-green;
     text-decoration: none;
     font-size: 1.9em;
     font-weight: 900;
   }
+}
+
+.web-apps {
+  padding: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  @media all and(max-width: 880px) {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .app {
+    transition: 800ms all cubic-bezier(.6, .7, .8, .8);
+    flex: 0 1 30%;
+    margin: 5px;
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+  @keyframes intro {
+    from {
+      opacity: 0;
+      transform: translateY(50%) rotateY(30deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotateY(0);
+    }
+  }
+  .intro {
+    opacity: 0;
+    animation: 2000ms intro ease-in-out 1s forwards;
+  }
+
+
+.app:hover {
+  transform: translateY(-5%);
 }

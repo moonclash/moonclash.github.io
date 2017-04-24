@@ -18,7 +18,8 @@
 
 body {
   overflow-x: hidden;
-  background: #1C202A;
+  background: url("./bg.jpg") no-repeat center center/cover, #1C202A;
+  background-blend-mode: overlay;
   color: #fff;
   font-family: 'Raleway';
   text-transform: uppercase; }
@@ -131,3 +132,35 @@ strong {
     text-decoration: none;
     font-size: 1.9em;
     font-weight: 900; }
+
+.web-apps {
+  padding: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  @media all and (max-width: 880px) {
+    .web-apps {
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center; } }
+  .web-apps .app {
+    transition: 800ms all cubic-bezier(0.6, 0.7, 0.8, 0.8);
+    flex: 0 1 30%;
+    margin: 5px; }
+    .web-apps .app img {
+      width: 100%; }
+
+@keyframes intro {
+  from {
+    opacity: 0;
+    transform: translateY(50%) rotateY(30deg); }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(0); } }
+
+.intro {
+  opacity: 0;
+  animation: 2000ms intro ease-in-out 1s forwards; }
+
+.app:hover {
+  transform: translateY(-5%); }
