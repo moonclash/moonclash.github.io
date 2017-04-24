@@ -8,7 +8,7 @@ $main-pink: #E7586E;
 }
 
 .container {
-  padding: 200px 25px;
+  padding: 50px 25px;
   max-width: 1280px;
   margin: 0 auto;
   overflow: hidden;
@@ -79,7 +79,7 @@ body {
 }
 
 strong {
-  color: $main-teal;
+  color: $main-green;
   text-shadow: 0 0 4px;
 }
 
@@ -132,8 +132,8 @@ strong {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-around;
-  padding: 25px 15px;
+  justify-content: space-between;
+  padding: 25px 0;
   a {
     color: $main-green;
     text-decoration: none;

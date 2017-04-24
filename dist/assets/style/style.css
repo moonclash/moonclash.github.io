@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 .container {
-  padding: 200px 25px;
+  padding: 50px 25px;
   max-width: 1280px;
   margin: 0 auto;
   overflow: hidden; }
@@ -85,7 +85,7 @@ body {
   animation-delay: 1000ms; }
 
 strong {
-  color: #5946FF;
+  color: #50D4C5;
   text-shadow: 0 0 4px; }
 
 @keyframes lotr {
@@ -125,8 +125,8 @@ strong {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-around;
-  padding: 25px 15px; }
+  justify-content: space-between;
+  padding: 25px 0; }
   .details a {
     color: #50D4C5;
     text-decoration: none;
