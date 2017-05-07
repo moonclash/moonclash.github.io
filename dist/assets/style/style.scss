@@ -146,7 +146,7 @@ strong {
   padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   @media all and(max-width: 880px) {
     flex-flow: column wrap;
     align-items: center;
@@ -155,7 +155,7 @@ strong {
   .app {
     transition: 800ms all cubic-bezier(.6, .7, .8, .8);
     flex: 0 1 30%;
-    margin: 5px;
+    margin: 18px;
     img {
       width: 100%;
     }

@@ -137,7 +137,7 @@ strong {
   padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: flex-start; }
   @media all and (max-width: 880px) {
     .web-apps {
       flex-flow: column wrap;
@@ -146,7 +146,7 @@ strong {
   .web-apps .app {
     transition: 800ms all cubic-bezier(0.6, 0.7, 0.8, 0.8);
     flex: 0 1 30%;
-    margin: 5px; }
+    margin: 18px; }
     .web-apps .app img {
       width: 100%; }
 
