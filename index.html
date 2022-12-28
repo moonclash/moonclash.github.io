@@ -5,70 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Emil Mladenov</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="dist/assets/style/style.css">
 </head>
 <body>
-
- 
-  <div class="container">
-    <h1 class="intro">HI. I am Emil and I like building stuff</h1>
-    <p class="intro">I am a London based Front End developer, focused on
-    delivering intuitive and friendly applications. </p>
-    <p class="intro">Let's follow <strong>your</strong> vision. Contact me for freelance projects or just check out my work:</p>
-    <div class="details intro">
-      <a href="https://www.linkedin.com/in/emilmladenov/">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/moonclash">
-        <i class="fa fa-github"></i>
-      </a>
-      <a href="https://codepen.io/mncl/">
-        <i class="fa fa-codepen"></i>
-      </a>
-      <a href="https://www.behance.net/emilmladen4c7c">
-        <i class="fa fa-behance"></i>
-      </a>
-      <a href="https://twitter.com/emil_mladenov">
-        <i class="fa fa-twitter"></i>
-      </a>
+ <div class="container">
+  <nav>
+    <a href="https://moonclash.github.io/">Emil Mladenov</a>
+    <a target="_blank" href="https://github.com/moonclash">GitHub</a>
+    <a target="_blank" href="https://www.moonclash.com/">Blog</a>
+    <a target="_blank" href="https://www.linkedin.com/in/emilmladenov/">LinkedIn</a>
+  </nav>
+  <h3>Projects</h3>
+  <div class="projects">
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>s3-blogger</strong>
+      </div>
+    <div class="project-card_overview">
+      Automated S3 static blogs
     </div>
-    <div class="web-apps intro">
-      <div class="app rebecca">
-        <a href="https://moonclash.github.io/rebecca-showcase">
-        
-        <img src="images/rebecca.png" alt="rebecca"></a>
-
-      </div>
-      <div class="app vulgar">
-        <a href="https://moonclash.github.io/vulgar-weather/">
-        
-        <img src="images/vulgar.png" alt="vulgar"></a>
-
-      </div>
-      <div class="app benzaiten">
-        <a href="https://moonclash.github.io/benzaiten">
-        
-        <img src="images/benzaiten.png" alt="benzaiten"></a>
-
-      </div>
-      <div class="app demeter">
-        <a href="https://moonclash.github.io/demeter">
-        
-        <img src="images/demeter.png" alt="demeter"></a>
-
-      </div>
-      <div class="app dwellant">
-        <a href="http://dwellant.com">
-        
-        <img src="images/dwellant.png" alt="dwellant"></a>
-
-      </div>
+      <div class="project-card_description">
+          <p>I wanted to build a simple solution for hosting a blog - no servers, no frameworks, no money needed.</p>
+          <p>Simply clone this template repo, add your AWS keys and write markdown files, and every time you push
+            to the main branch, a CircleCI pipeline will turn your markdown into HTML files, transpile your SASS code
+            and upload everything to your S3 bucket of choice.
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>Node</strong>
+          <strong>SASS</strong>
+          <strong>CircleCI</strong>
+          <strong>AWS S3</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="https://github.com/moonclash/s3-blogger">Source Code</a>
+        </div>
     </div>
+
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>caniusepls</strong>
+      </div>
+    <div class="project-card_overview">
+      Check browsers features support in your terminal
+    </div>
+      <div class="project-card_description">
+          <p>I wanted to learn how to build a CLI tool with Node, and since we as developers love using our terminals
+            for everything, I thought that checking feature support with a command would be a cool usecase. This project
+            is using a scraper, that scrapes <a href="https://caniuse.com/">caniuse</a>, and exposes an API, hosted as a
+            serverless function on AWS lambda and provides a nice visual representation in your terminal
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>Node</strong>
+          <strong>AWS Lambda</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="https://www.npmjs.com/package/caniusepls">NPM package</a>
+          <a target="_blank" href="https://github.com/moonclash/caniuse-scraper-lambda">Serverless scraper source code</a>
+          <a target="_blank" href="https://github.com/moonclash/caniuse-cli">CLI Tool source code</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>my tech blog</strong>
+      </div>
+    <div class="project-card_overview">
+      Sharing my knowledge with the Internet
+    </div>
+      <div class="project-card_description">
+          <p>I love sharing knowledge, and I love writing. Combine these two passions and you get my technical blog.
+            I write about anything I find interesting, or about things that I think can be explained better than on
+            other place on the internet - I've written about design patterns, architectures and about my wacky adventures
+            such as <a target="_blank" href="https://www.moonclash.com/simple-go-api/">writing an API in a language I've never written</a> or 
+            <a target="_blank" href="https://www.moonclash.com/clap-button/">hacking together a clap button on a static site</a>
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>React</strong>
+          <strong>Netlify</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="https://www.moonclash.com">Blog page</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>the Good Morning Project</strong>
+      </div>
+    <div class="project-card_overview">
+      Generate very niche memes from your images
+    </div>
+      <div class="project-card_description">
+          <p>
+            On the surface, this project is a meme, that you'd only understand if you are from Eastern Europe,
+            but behind the scenes it's actually a pretty cool project - I am using FastAPI to take an image
+            uploaded by a user, edit it with Python and upload it to S3, providing the edited image for the user
+            to download
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>Python</strong>
+          <strong>FastAPI</strong>
+          <strong>AWS S3</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="http://www.dobroutro.net/">Live page</a>
+          <a target="_blank" href="https://github.com/moonclash/image-processing-api">Source Code</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>Rebecca - a tiny animation library</strong>
+      </div>
+    <div class="project-card_overview">
+      A small library of CSS animations
+    </div>
+      <div class="project-card_description">
+          <p>
+            My favourite part of Front End development is hands down animating things. So I wrote a small library
+            with different animations and built a simple React showcase for it.
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>SASS</strong>
+          <strong>React</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="https://moonclash.github.io/rebecca-showcase/">Showcase</a>
+          <a target="_blank" href="https://github.com/moonclash/rebecca">Source Code</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card_header">
+        <strong>Levski Fight Club</strong>
+      </div>
+    <div class="project-card_overview">
+      An online schedule page for my fight gym
+    </div>
+      <div class="project-card_description">
+          <p>
+            The only way you could check the schedule for our fight gym was by going on their Facebook page
+            and looking at a pinned photo, uploaded by the admin.
+          </p>
+          <p>I decided to build a page that will display the schedule and allow our coaches to update it
+            instantly. Since none of them wanted to deal with logging into a CMS, pushing buttons (why do that, when
+            you could spend that time training?), I utilised a Google Sheet as a database for the coaches to update.
+            The front end is a Vue.js app that calls a NestJS API, fetching the data.
+          </p>
+        </div>
+        <div class="project-card_technologies">
+          <h4>Technologies:</h4>
+          <strong>Node</strong>
+          <strong>NestJS</strong>
+          <strong>Vue</strong>
+        </div>
+        <div class="project-card_links">
+          <a target="_blank" href="https://levskifightclub.com/">Website</a>
+        </div>
+    </div>
+
   </div>
-  <script>
-  var audio = document.querySelector("audio");
-  audio.volume = 0.012;
-</script>
+ </div>
 </body>
 </html>

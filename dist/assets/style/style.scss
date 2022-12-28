@@ -1,186 +1,75 @@
-  $main-blue: #1C202A;
-$main-purple: #8C53F9;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+$main-white:  #fffff0;
 $main-green: #50D4C5;
 $main-teal: #5946FF;
 $main-pink: #E7586E;
+$main-black: #002b36;
+
+nav {
+  display: flex;
+  a {
+    padding: 5px 10px;
+  }
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat';
 }
 
 .container {
   padding: 50px 25px;
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
-  h1 {
-    font-size: 3.9em;
-    margin: 0;
-    padding: 10px 0;
+}
+body, html {
+  height: 100%;
+  background: $main-black;
+  a {
+    color: $main-white;
   }
-  p {
-    font-size: 1.2em;
-    color: transparentize(#fff, .1);
-    margin: 0;
-    padding: 5px 0;
+}
+
+.projects {
+  display: flex;
+  flex-flow: column;
+  .project-card {
+    padding: 5px;
+    box-shadow: 0 0 1px 1px lighten($main-white, 25%);
+    margin: 5px;
+    border-radius: 5px;
+    p {
+      line-height: 1.3;
+    }
+    .project-card_header {
+      strong {
+        font-size: 1.2rem;
+      }
+    }
+    .project-card_technologies {
+      h4 {
+        margin: 5px 0;
+      }
+      strong {
+        display: block;
+      }
+    }
+    .project-card_links {
+      padding-top: 10px;
+      a {
+        display: block;
+        padding: 2px 0;
+      }
+    }
+    a {
+      color: $main-green;
+    }
   }
 }
 
 body {
   overflow-x: hidden;
-  background: url('./bg.jpg') no-repeat center center / cover, $main-blue;
-  background-blend-mode: overlay;
   color: #fff;
-  font-family: 'Raleway';
-  text-transform: uppercase;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  box-shadow: 0 0 15px 5px;
-  opacity: 0;
-}
-
-.ring-1 {
-  color: $main-green;
-  box-shadow: 0 0 15px 5px transparentize($main-green, .4);
-  animation: 2000ms lotu ease-in-out 500ms forwards;
-}
-
-.ring-2 {
-  color: $main-purple;
-  box-shadow: 0 0 15px 5px transparentize($main-purple, .4);
-  right: -10%;
-  animation: 2000ms lotr ease-in-out 500ms forwards;
-}
-
-.ring-3 {
-  color: $main-teal;
-  box-shadow: 0 0 15px 5px transparentize($main-teal, .4);
-  left: -10%;
-  animation: 2000ms lotl ease-in-out 500ms forwards;
-}
-
-.ring-4 {
-  color: $main-pink;
-  box-shadow: 0 0 15px 5px transparentize($main-pink, .4);
-  animation: 2000ms lotd ease-in-out 500ms forwards;
-}
-
-@for $i from 1 through 4 {
-  .ring:nth-child(#{$i}) {
-    border: 15px * $i solid;
-    z-index: -1 - $i;
-    width: 200px * $i;
-    height: 200px * $i;
-    top: 100px * $i;
-    animation-delay: 250ms * $i;
-  }
-}
-
-strong {
-  color: $main-green;
-  text-shadow: 0 0 4px;
-}
-
-@keyframes lotr {
-  from {
-    opacity: 0;
-    transform: translateX(250%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes lotl {
-  from {
-    opacity: 0;
-    transform: translateX(-250%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes lotu {
-  from {
-    opacity: 0;
-    transform: translateY(-250%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes lotd {
-  from {
-    opacity: 0;
-    transform: translateY(-250%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.details {
-  max-width: 600px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 0;
-  a {
-    color: $main-green;
-    text-decoration: none;
-    font-size: 1.9em;
-    font-weight: 900;
-  }
-}
-
-.web-apps {
-  padding: 50px 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  @media all and(max-width: 880px) {
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .app {
-    transition: 800ms all cubic-bezier(.6, .7, .8, .8);
-    flex: 0 1 30%;
-    margin: 18px;
-    img {
-      width: 100%;
-    }
-  }
-
-}
-
-
-
-  @keyframes intro {
-    from {
-      opacity: 0;
-      transform: translateY(50%) rotateY(30deg);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) rotateY(0);
-    }
-  }
-  .intro {
-    opacity: 0;
-    animation: 2000ms intro ease-in-out 1s forwards;
-  }
-
-
-.app:hover {
-  transform: translateY(-5%);
 }
